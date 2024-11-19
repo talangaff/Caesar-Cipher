@@ -8,7 +8,7 @@ main.py can be run on its own, or the functions within can be called from anothe
 
 Converts the plaintext input into ciphertext by shifting it according to the provided key. Returns the resulting ciphertext.
 
-**decrypt(_cipher_text, key_):**
+**decrypt(_ciphertext, key_):**
 
 Converts the ciphertext input into plaintext by shifting it according to the provided key. Returns the resulting plaintext.
 
