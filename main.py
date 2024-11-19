@@ -30,8 +30,8 @@ def main():
             print(err)
     
 
-def encrypt(text, key):
-    text = str(text)
+def encrypt(plaintext, key):
+    plaintext = str(plaintext)
     newLower = lowercaseAlphabet[:]
     newUpper = uppercaseAlphabet[:]
 
@@ -46,7 +46,7 @@ def encrypt(text, key):
 
     newText = ""
 
-    for letter in text:
+    for letter in plaintext:
         if letter in lowercaseAlphabet:
             newText += newLower[lowercaseAlphabet.index(letter)]
         elif letter in uppercaseAlphabet:
@@ -56,14 +56,14 @@ def encrypt(text, key):
     
     return newText
 
-def decrypt(text, key):
-    return encrypt(text, 26-key)
+def decrypt(ciphertext, key):
+    return encrypt(ciphertext, 26-key)
 
-def decryptWithoutKey(text):
+def decryptWithoutKey(ciphertext):
     list = []
     
     for possibleKey in range(26,0,-1):
-        list.append(encrypt(text, possibleKey))
+        list.append(encrypt(ciphertext, possibleKey))
     
     return list
 
