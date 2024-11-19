@@ -5,6 +5,7 @@ main.py can be run on its own, or the functions within can be called from anothe
 
 # Functions:
 **encrypt(_plaintext, key_)**
+
 Converts the plaintext input into ciphertext by shifting it according to the provided key. Returns the resulting ciphertext.
 
 **decrypt(_cipher_text, key_)**
