@@ -4,7 +4,7 @@ uppercaseAlphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L",
 def main():
     while True:
         try:
-            command = input("Input a command (encrypt, decrypt, or decryptWithoutKey): ").lower().strip()
+            command = input("Input a command (encrypt, decrypt, decryptWithoutKey, or exit): ").lower().strip()
 
             if command == "encrypt":
                 text = input("Input the text to encrypt: ")
@@ -22,6 +22,9 @@ def main():
                 text = input("Input the text to decrypt: ")
 
                 print(decryptWithoutKey(text))
+
+            elif command == "exit":
+                break
             
             else:
                 print("Invalid command")
